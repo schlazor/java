@@ -35,12 +35,15 @@ action :set do
         next
       end
 
+      Chef::Log.warn "#{alternatives_cmd} --display #{cmd} | grep #{alt_path} | grep 'priority #{priority}$'"
       alternative_exists_same_priority = shell_out("#{alternatives_cmd} --display #{cmd} | grep #{alt_path} | grep 'priority #{priority}$'").exitstatus == 0
+      Chef::Log.warn "#{alternatives_cmd} --display #{cmd} | grep #{alt_path}"
       alternative_exists = shell_out("#{alternatives_cmd} --display #{cmd} | grep #{alt_path}").exitstatus == 0
       # remove alternative if priority is changed and install it with new priority
       if alternative_exists && !alternative_exists_same_priority
         converge_by("Removing alternative for #{cmd} with old priority") do
           Chef::Log.debug "Removing alternative for #{cmd} with old priority"
+          Chef::Log.warn "#{alternatives_cmd} --remove #{cmd} #{alt_path}"
           remove_cmd = shell_out("#{alternatives_cmd} --remove #{cmd} #{alt_path}")
           alternative_exists = false
           unless remove_cmd.exitstatus == 0
@@ -53,8 +56,10 @@ action :set do
         converge_by("Add alternative for #{cmd}") do
           Chef::Log.debug "Adding alternative for #{cmd}"
           if new_resource.reset_alternatives
+            Chef::Log.warn "rm /var/lib/alternatives/#{cmd}"
             shell_out("rm /var/lib/alternatives/#{cmd}")
           end
+          Chef::Log.warn "#{alternatives_cmd} --install #{bin_path} #{cmd} #{alt_path} #{priority}"
           install_cmd = shell_out("#{alternatives_cmd} --install #{bin_path} #{cmd} #{alt_path} #{priority}")
           unless install_cmd.exitstatus == 0
             raise(%( install alternative failed ))
@@ -64,10 +69,12 @@ action :set do
 
       # set the alternative if default
       next unless new_resource.default
+      Chef::Log.warn "#{alternatives_cmd} --display #{cmd} | grep \"link currently points to #{alt_path}\""
       alternative_is_set = shell_out("#{alternatives_cmd} --display #{cmd} | grep \"link currently points to #{alt_path}\"").exitstatus == 0
       next if alternative_is_set
       converge_by("Set alternative for #{cmd}") do
         Chef::Log.debug "Setting alternative for #{cmd}"
+        Chef::Log.warn "#{alternatives_cmd} --set #{cmd} #{alt_path}"
         set_cmd = shell_out("#{alternatives_cmd} --set #{cmd} #{alt_path}")
         unless set_cmd.exitstatus == 0
           raise(%( set alternative failed ))

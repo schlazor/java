@@ -1,0 +1,128 @@
+#!/bin/bash
+alternatives --display appletviewer | grep /usr/lib/jvm/java-1.8.0/bin/appletviewer | grep 'priority 1080$'
+alternatives --display appletviewer | grep /usr/lib/jvm/java-1.8.0/bin/appletviewer
+alternatives --install /usr/bin/appletviewer appletviewer /usr/lib/jvm/java-1.8.0/bin/appletviewer 1080
+sync
+alternatives --display extcheck | grep /usr/lib/jvm/java-1.8.0/bin/extcheck | grep 'priority 1080$'
+alternatives --display extcheck | grep /usr/lib/jvm/java-1.8.0/bin/extcheck
+alternatives --install /usr/bin/extcheck extcheck /usr/lib/jvm/java-1.8.0/bin/extcheck 1080
+sync
+alternatives --display idlj | grep /usr/lib/jvm/java-1.8.0/bin/idlj
+alternatives --install /usr/bin/idlj idlj /usr/lib/jvm/java-1.8.0/bin/idlj 1080
+sync
+alternatives --display jar | grep /usr/lib/jvm/java-1.8.0/bin/jar
+alternatives --install /usr/bin/jar jar /usr/lib/jvm/java-1.8.0/bin/jar 1080
+sync
+alternatives --display jarsigner | grep /usr/lib/jvm/java-1.8.0/bin/jarsigner
+alternatives --install /usr/bin/jarsigner jarsigner /usr/lib/jvm/java-1.8.0/bin/jarsigner 1080
+sync
+alternatives --display java | grep /usr/lib/jvm/java-1.8.0/bin/java
+alternatives --install /usr/bin/java java /usr/lib/jvm/java-1.8.0/bin/java 1080
+sync
+alternatives --display javac | grep /usr/lib/jvm/java-1.8.0/bin/javac
+alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-1.8.0/bin/javac 1080
+sync
+alternatives --display javadoc | grep /usr/lib/jvm/java-1.8.0/bin/javadoc
+alternatives --install /usr/bin/javadoc javadoc /usr/lib/jvm/java-1.8.0/bin/javadoc 1080
+sync
+alternatives --display javah | grep /usr/lib/jvm/java-1.8.0/bin/javah | grep 'priority 1080$'
+alternatives --display javah | grep /usr/lib/jvm/java-1.8.0/bin/javah
+alternatives --install /usr/bin/javah javah /usr/lib/jvm/java-1.8.0/bin/javah 1080
+sync
+alternatives --display javap | grep /usr/lib/jvm/java-1.8.0/bin/javap
+alternatives --install /usr/bin/javap javap /usr/lib/jvm/java-1.8.0/bin/javap 1080
+sync
+alternatives --display jcmd | grep /usr/lib/jvm/java-1.8.0/bin/jcmd | grep 'priority 1080$'
+alternatives --display jcmd | grep /usr/lib/jvm/java-1.8.0/bin/jcmd
+alternatives --install /usr/bin/jcmd jcmd /usr/lib/jvm/java-1.8.0/bin/jcmd 1080
+sync
+alternatives --display jconsole | grep /usr/lib/jvm/java-1.8.0/bin/jconsole
+alternatives --install /usr/bin/jconsole jconsole /usr/lib/jvm/java-1.8.0/bin/jconsole 1080
+sync
+alternatives --display jdb | grep /usr/lib/jvm/java-1.8.0/bin/jdb | grep 'priority 1080$'
+alternatives --display jdb | grep /usr/lib/jvm/java-1.8.0/bin/jdb
+alternatives --install /usr/bin/jdb jdb /usr/lib/jvm/java-1.8.0/bin/jdb 1080
+sync
+alternatives --display jdeps | grep /usr/lib/jvm/java-1.8.0/bin/jdeps
+alternatives --install /usr/bin/jdeps jdeps /usr/lib/jvm/java-1.8.0/bin/jdeps 1080
+sync
+alternatives --display jhat | grep /usr/lib/jvm/java-1.8.0/bin/jhat
+alternatives --install /usr/bin/jhat jhat /usr/lib/jvm/java-1.8.0/bin/jhat 1080
+sync
+alternatives --display jinfo | grep /usr/lib/jvm/java-1.8.0/bin/jinfo
+alternatives --install /usr/bin/jinfo jinfo /usr/lib/jvm/java-1.8.0/bin/jinfo 1080
+sync
+alternatives --display jjs | grep /usr/lib/jvm/java-1.8.0/bin/jjs
+alternatives --install /usr/bin/jjs jjs /usr/lib/jvm/java-1.8.0/bin/jjs 1080
+sync
+alternatives --display jmap | grep /usr/lib/jvm/java-1.8.0/bin/jmap
+alternatives --install /usr/bin/jmap jmap /usr/lib/jvm/java-1.8.0/bin/jmap 1080
+sync
+alternatives --display jps | grep /usr/lib/jvm/java-1.8.0/bin/jps | grep 'priority 1080$'
+alternatives --display jps | grep /usr/lib/jvm/java-1.8.0/bin/jps
+alternatives --install /usr/bin/jps jps /usr/lib/jvm/java-1.8.0/bin/jps 1080
+sync
+alternatives --display jrunscript | grep /usr/lib/jvm/java-1.8.0/bin/jrunscript
+alternatives --install /usr/bin/jrunscript jrunscript /usr/lib/jvm/java-1.8.0/bin/jrunscript 1080
+sync
+alternatives --display jsadebugd | grep /usr/lib/jvm/java-1.8.0/bin/jsadebugd
+alternatives --install /usr/bin/jsadebugd jsadebugd /usr/lib/jvm/java-1.8.0/bin/jsadebugd 1080
+sync
+alternatives --display jstack | grep /usr/lib/jvm/java-1.8.0/bin/jstack
+alternatives --install /usr/bin/jstack jstack /usr/lib/jvm/java-1.8.0/bin/jstack 1080
+sync
+alternatives --display jstat | grep /usr/lib/jvm/java-1.8.0/bin/jstat
+alternatives --install /usr/bin/jstat jstat /usr/lib/jvm/java-1.8.0/bin/jstat 1080
+sync
+alternatives --display jstatd | grep /usr/lib/jvm/java-1.8.0/bin/jstatd
+alternatives --install /usr/bin/jstatd jstatd /usr/lib/jvm/java-1.8.0/bin/jstatd 1080
+sync
+alternatives --display keytool | grep /usr/lib/jvm/java-1.8.0/bin/keytool | grep 'priority 1080$'
+alternatives --display keytool | grep /usr/lib/jvm/java-1.8.0/bin/keytool
+alternatives --install /usr/bin/keytool keytool /usr/lib/jvm/java-1.8.0/bin/keytool 1080
+sync
+alternatives --display native2ascii | grep /usr/lib/jvm/java-1.8.0/bin/native2ascii
+alternatives --install /usr/bin/native2ascii native2ascii /usr/lib/jvm/java-1.8.0/bin/native2ascii 1080
+sync
+alternatives --display orbd | grep /usr/lib/jvm/java-1.8.0/bin/orbd
+alternatives --install /usr/bin/orbd orbd /usr/lib/jvm/java-1.8.0/bin/orbd 1080
+sync
+alternatives --display pack200 | grep /usr/lib/jvm/java-1.8.0/bin/pack200
+alternatives --install /usr/bin/pack200 pack200 /usr/lib/jvm/java-1.8.0/bin/pack200 1080
+sync
+alternatives --display policytool | grep /usr/lib/jvm/java-1.8.0/bin/policytool
+alternatives --install /usr/bin/policytool policytool /usr/lib/jvm/java-1.8.0/bin/policytool 1080
+sync
+alternatives --display rmic | grep /usr/lib/jvm/java-1.8.0/bin/rmic
+alternatives --install /usr/bin/rmic rmic /usr/lib/jvm/java-1.8.0/bin/rmic 1080
+sync
+alternatives --display rmid | grep /usr/lib/jvm/java-1.8.0/bin/rmid
+alternatives --install /usr/bin/rmid rmid /usr/lib/jvm/java-1.8.0/bin/rmid 1080
+sync
+alternatives --display rmiregistry | grep /usr/lib/jvm/java-1.8.0/bin/rmiregistry
+alternatives --install /usr/bin/rmiregistry rmiregistry /usr/lib/jvm/java-1.8.0/bin/rmiregistry 1080
+sync
+alternatives --display schemagen | grep /usr/lib/jvm/java-1.8.0/bin/schemagen
+alternatives --install /usr/bin/schemagen schemagen /usr/lib/jvm/java-1.8.0/bin/schemagen 1080
+sync
+alternatives --display serialver | grep /usr/lib/jvm/java-1.8.0/bin/serialver
+alternatives --install /usr/bin/serialver serialver /usr/lib/jvm/java-1.8.0/bin/serialver 1080
+sync
+alternatives --display servertool | grep /usr/lib/jvm/java-1.8.0/bin/servertool
+alternatives --install /usr/bin/servertool servertool /usr/lib/jvm/java-1.8.0/bin/servertool 1080
+sync
+alternatives --display tnameserv | grep /usr/lib/jvm/java-1.8.0/bin/tnameserv
+alternatives --install /usr/bin/tnameserv tnameserv /usr/lib/jvm/java-1.8.0/bin/tnameserv 1080
+sync
+alternatives --display unpack200 | grep /usr/lib/jvm/java-1.8.0/bin/unpack200
+alternatives --install /usr/bin/unpack200 unpack200 /usr/lib/jvm/java-1.8.0/bin/unpack200 1080
+sync
+alternatives --display wsgen | grep /usr/lib/jvm/java-1.8.0/bin/wsgen
+alternatives --install /usr/bin/wsgen wsgen /usr/lib/jvm/java-1.8.0/bin/wsgen 1080
+sync
+alternatives --display wsimport | grep /usr/lib/jvm/java-1.8.0/bin/wsimport
+alternatives --install /usr/bin/wsimport wsimport /usr/lib/jvm/java-1.8.0/bin/wsimport 1080
+sync
+alternatives --display xjc | grep /usr/lib/jvm/java-1.8.0/bin/xjc
+alternatives --install /usr/bin/xjc xjc /usr/lib/jvm/java-1.8.0/bin/xjc 1080
+sync

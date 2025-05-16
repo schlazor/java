@@ -6,6 +6,7 @@ driver:
 
 provisioner:
   name: chef_zero
+  log_level: <%= ENV['CHEF_LOG_LEVEL'] || 'warn' %>
 
 verifier:
   name: inspec
@@ -117,3 +118,7 @@ suites:
     verifier:
       inspec_tests: [test/integration/corretto]
       inputs: { java_version: "18" }
+  # OpenJDK Package with multiple versions
+  - name: multiple-openjdk-pkg
+    run_list:
+      - recipe[test::multiple_openjdk_pkg]
